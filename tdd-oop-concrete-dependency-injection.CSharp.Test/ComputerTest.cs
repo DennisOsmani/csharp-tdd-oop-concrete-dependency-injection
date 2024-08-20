@@ -50,6 +50,7 @@ namespace tdd_oop_concrete_dependency_injection.CSharp.Test
             preInstalled.Add(new Game("Baldur's Gate"));
 
             Computer myPc = new Computer(myPsu);
+            myPc._installedGames = preInstalled;
 
            // myPc.installGame("Dwarf Fortress");
            // myPc.installGame("Baldur's Gate");

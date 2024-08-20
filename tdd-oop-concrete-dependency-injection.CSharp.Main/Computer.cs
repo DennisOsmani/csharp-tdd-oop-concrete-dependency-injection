@@ -12,6 +12,8 @@ namespace tdd_oop_concrete_dependency_injection.CSharp.Main
         
         private PowerSupply _powerSupply;
 
+        private Game _game;
+
         public Computer(PowerSupply powerSupply) {
             _powerSupply = powerSupply;
             _installedGames = new List<Game>();
@@ -22,8 +24,8 @@ namespace tdd_oop_concrete_dependency_injection.CSharp.Main
         }
 
         public void installGame(string name) {
-            Game game = new Game(name);
-            this._installedGames.Add(game);
+            _game = new Game(name);
+            this._installedGames.Add(_game);
         }
 
         public String playGame(string name) {
