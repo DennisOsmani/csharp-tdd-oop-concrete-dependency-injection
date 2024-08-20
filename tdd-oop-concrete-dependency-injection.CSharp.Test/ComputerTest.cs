@@ -52,9 +52,6 @@ namespace tdd_oop_concrete_dependency_injection.CSharp.Test
             Computer myPc = new Computer(myPsu);
             myPc._installedGames = preInstalled;
 
-           // myPc.installGame("Dwarf Fortress");
-           // myPc.installGame("Baldur's Gate");
-
             Assert.That(2, Is.EqualTo(myPc._installedGames.Count));
             Assert.That("Dwarf Fortress", Is.EqualTo(myPc._installedGames[0].name));
             Assert.That("Baldur's Gate", Is.EqualTo(myPc._installedGames[1].name));
